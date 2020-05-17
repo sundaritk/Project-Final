@@ -1,0 +1,76 @@
+html{
+    position: relative;
+    min-height: 80%;
+}
+
+body {
+
+    margin-bottom: 50px;
+  }
+
+.panel-body{
+    background-color: GhostWhite ;
+
+}
+
+h2{
+    font-style: bold;
+    color: Yellow;
+}
+
+.panel{
+    padding: 10px;
+    background-color: DarkSalmon ;
+
+}
+
+footer{
+    background-color: DarkOliveGreen ;
+    padding: 10px;
+    height: 60px;
+    width: 100%;
+    border-top: 10px;
+    border-top-color: Brown ;
+    border-width: 15px;
+    border-top-style: solid;
+    position: absolute;
+    bottom: 0;
+}
+
+.current-tag{
+    border: 10px;
+    border-width: 5px;
+    border-color: Pink;
+    border-style: solid;
+}
+
+h3{
+    color: Teal;
+    font-style: bold;
+    text-align: center;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: lightgray;
+ }
+
+@media (max-width: 10px) {
+    .navbar {
+      background-color: rgb(12, 173, 167);
+  }
+
+    .navbar-brand {
+                   background-color: ;
+                   font-family: Lucida Console;
+                   font-weight: bold;
+                   color: rgb(12, 173, 167);
+  }
+
+    h2 {
+        font-size: 100%
+    }
+
+    h3 {
+        font-size: 100%
+    }
+}
