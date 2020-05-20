@@ -103,7 +103,7 @@ def main(path):
     livedf2
 
     
-    json_file = open('../../Resources/data/analysis_output/model.json', 'r')
+    json_file = open('model.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
@@ -125,14 +125,13 @@ def main(path):
     y_test=load('y_test.npy',allow_pickle=True)
     y_train = np_utils.to_categorical(lb.fit_transform(y_train))
     y_test = np_utils.to_categorical(lb.fit_transform(y_test))
-    livepredictions = str(lb.inverse_transform((liveabc)))
-    gender=livepredictions[2:6]
-    emotion=livepredictions[7:14]
-    # print(livepredictions)
-
+    livepredictions = str(lb.inverse_transform((liveabc))[0])
+    gender_emotion = livepredictions.split('_')
+    gender=gender_emotion[0].capitalize()
+    emotion=gender_emotion[1].capitalize()
     return gender,emotion
 
-gender,emotion= main('../../Resources/data/AudioFile/03-01-01-01-01-01-01.wav')
+gender,emotion= main('../../Resources/data/AudioFile/03-01-05-01-01-01-02.wav')
 # waveform.show()
 print(gender)
 print(emotion)
