@@ -24,13 +24,13 @@ h2{
 }
 
 footer{
-    background-color: DarkOliveGreen ;
+    /* background-color: DarkOliveGreen ; */
     padding: 10px;
     height: 60px;
     width: 100%;
     border-top: 10px;
     border-top-color: Brown ;
-    border-width: 15px;
+    border-width: 10px;
     border-top-style: solid;
     position: absolute;
     bottom: 0;
