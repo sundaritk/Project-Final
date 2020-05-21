@@ -1,87 +1,108 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Can the Computer Recognize Your Emotion??</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="static/css/style.css">
-    
-</head>
-<body style="background-color: rgb(239, 241, 243)">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- emply col to move over text -->
-        <div class="col-md-1"></div>
-        <div class="col-md-1"></div>
-        <div class="col-md-1"></div>
-        <a class="navbar-brand" href="index.html" style="color: orangered;  ">
-          <span class="nav-color">Can the Computer Recognize Your Emotion??</span>
-        </a>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- emply col to move over text -->
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-1"></div>
+          <a class="navbar-brand" href="index.html" style="color: orangered;  ">
+            <span class="nav-color">Can the Computer Recognize Your Emotion??</span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html">About</a></li>
+            <li><a href="http://neuron.arts.ryerson.ca/ravdess/?f=3, http://kahlan.eps.surrey.ac.uk/savee/Download.html" target="_blank">Data</a></li>
+            <li><a href="license.html">License</a></li>
+          </ul>    
+        </div>        
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-      <li><a href="about.html">About</a></li>
-      <li><a href="http://neuron.arts.ryerson.ca/ravdess/?f=3, http://kahlan.eps.surrey.ac.uk/savee/Download.html" target="_blank">Data</a></li>
-      <li><a href="license.html">License</a></li>
-    </ul>    
-    </div>        
-    </div>
     </nav>
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-    <h3 style="color: blue">Parselmouth Vs TensorFlow Analysis</h3>
-        </div>
-    </div>
-    <br><br>
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-6">
-    <form action="/action_page.php">
-        <label for="fname">Enter File Name:</label>
-        <input type="text" id="fname" name="fname">
-    <!-- Click the "Submit" button and the form-data will be sent to a page on the server called "action_page.js" -->
-        <input type="submit" value="Submit">
-  </form>
-</div>
-</div>
-  <br><br>
-    <div class="row">
-        <div class="col-md-6">
-            <P>Parcelmouth sound wave</P>
-            <img src="Resources/images/sound.png" width="550" height="250" alt="Parselmouth Image waveplot">
-        </div>
-        <div class="col-md-6">
-            <P>Librosa sound wave</P>
-            <img src="Resources/images/librosa_sound.png" width="550" height="250" alt="Parselmouth Image waveplot">
-        </div>
-    </div>
-    <br><br><br><br><br><br>  
+</head>
+<body>
+  <div class="outer-border"> 
+    <div class="inner-border"> 
+        <div class="content">  
+          <div class="row">
+            <div class="col-md-12">
+              <p>When you are ready to record your voice  
+              <a class="btn btn-primary btn-sm" href="/record" role="button">Record Voice</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p>To hear your voice recording   
+              <a class="btn btn-primary btn-sm" href="/playback" role="button">Play Voice</a>   
+              If you want to re-record your voice, click Record Voice above again  </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p>To Predict your emotion      
+              <a class="btn btn-primary btn-sm" href="/predict" role="button">Emotion Recognition</a> </p>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <p>The recorded voice is from a {{['gender']}} and the predicted emotion is {{['emotion']}} </p>
+            </div>
+          </div>
+          <br>
+          <div class='row'>
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <h2 class="title">Emotion Recgnition and Prediction</h2><hr>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12">
+                <div class="card mb-4 shadow-lg bg-light">
+                    <img class="p-3" src="tbd" alt="" width="100%">
+                    <div class="card-body">
+                        <h4 class="card-header text-center">tbd</h4> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12">
+              <div class="card mb-4 shadow-lg bg-light">
+                <img class="p-3" src="tbd" alt="" width="100%">
+                <div class="card-body">
+                  <h4 class="card-header text-center">tbd</h4> 
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12">
+              <div class="card mb-4 shadow-lg bg-light">
+                <img class="p-3" src="tbd" alt="" width="100%">
+                <div class="card-body">
+                  <h4 class="card-header text-center">tbd</h4> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+    </div> 
+  </div> 
+  <!-- <div class="ex1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</div> -->
+  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 </body>
 <footer>
-  <div class="row">
-    <div class="col-md-12">
-      <p> &copy; <i style="color: rgb(4, 0, 255)">Copyright UofM Data Bootcamp 2020</i></p>
-    </div>
+  <div class="w3-container">
+    <p> &copy; <i style="color: rgb(4, 0, 255)">Copyright UofM Data Bootcamp 2020</i></p>
     <ul>
       <li> Parselmouth is released under the GNU General Public License, version 3 or later. See the <a hre = "https://github.com/YannickJadoul/Parselmouth/blob/master/LICENSE">LICENSE</a> file for details.</li>
       <li>MIT License &nbsp; &copy; Copyright (c) 2018 Mitesh Puthran</li>

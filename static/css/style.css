@@ -3,14 +3,8 @@ html{
     min-height: 80%;
 }
 
-body {
-
-    margin-bottom: 50px;
-  }
-
 .panel-body{
     background-color: GhostWhite ;
-
 }
 
 h2{
@@ -22,6 +16,34 @@ h2{
     background-color: DarkSalmon ;
 
 }
+
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+.content, .outer-border { 
+    width: 1530px; 
+    height: 550px; 
+    text-align:justify; 
+    background-color:white; 
+    color:black; 
+    padding-left:15px; 
+    padding-right:15px; 
+} 
+.outer-border { 
+    /* border: 2px solid black;  */
+    position: relative; 
+    overflow: hidden; 
+} 
+.inner-border { 
+    position: absolute; 
+    left: 0; 
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+} 
+.inner-border::-webkit-scrollbar { 
+    display: none; 
+} 
 
 footer{
     /* background-color: DarkOliveGreen ; */
