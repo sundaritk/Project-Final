@@ -30,23 +30,23 @@ import numpy as np
 from scipy.io.wavfile import write
 
 
-#function for recording an .wav audio file, records 5 seconds
+#function for recording an .wav audio file
 def record():
     fs = 44100
     seconds = 5
     recording = sd.rec(int(seconds*fs), samplerate=fs, channels=2)
     sd.wait()
-    write('livefile.wav', fs, recording)
+    write('../../Resources/data/AudioFile/livefile.wav', fs, recording)
 
 #function for playing back/listening to created audio file
 def playback():
-    file = "livefile.wav"
+    file = "../../Resources/data/AudioFile/livefile.wav"
     data, fs = sf.read(file, dtype = 'float32')
     sd.play(data, fs)
     status = sd.wait()
 
 def main():
-    file = "livefile.wav"
+    file = "../../Resources/data/AudioFile/livefile.wav"
 
     sns.set() # Use seaborn's default style to make attractive graphs
 
@@ -152,7 +152,7 @@ def main():
     emotion=gender_emotion[1].capitalize()
     return gender,emotion
 
-#gender,emotion= main()
+gender,emotion= main()
 # waveform.show()
-#print(gender)
-#print(emotion)
+print(gender)
+print(emotion)
