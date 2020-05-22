@@ -35,7 +35,7 @@ def record():
     seconds = 5
     recording = sd.rec(int(seconds*fs), samplerate=fs, channels=2)
     sd.wait()
-    write('livefile.wav', fs, recording)
+    write('../livefile.wav', fs, recording)
 
 #function for playing back/listening to created audio file
 def playback():
