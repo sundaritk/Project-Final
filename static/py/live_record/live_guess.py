@@ -35,11 +35,11 @@ def record():
     seconds = 5
     recording = sd.rec(int(seconds*fs), samplerate=fs, channels=2)
     sd.wait()
-    write('livefile.wav', fs, recording)
+    write('../livefile.wav', fs, recording)
 
 #function for playing back/listening to created audio file
 def playback():
-    file = "livefile.wav"
+    file = "../livefile.wav"
     data, fs = sf.read(file, dtype = 'float32')
     sd.play(data, fs)
     status = sd.wait()
@@ -48,13 +48,13 @@ def playback():
 def emo_guess():
 
     #creates chart
-    data, sampling_rate = librosa.load("livefile.wav")
+    data, sampling_rate = librosa.load("../livefile.wav")
     plt.figure(figsize=(15,5))
     librosa.display.waveplot(data, sr = sampling_rate)
     plt.savefig("live_librosa_chart.png")
 
     #creates data frame of features
-    X, sample_rate = librosa.load('livefile.wav', res_type='kaiser_fast',duration=2.5,sr=22050*2,offset=0.5)
+    X, sample_rate = librosa.load('../livefile.wav', res_type='kaiser_fast',duration=2.5,sr=22050*2,offset=0.5)
     sample_rate = np.array(sample_rate)
     live_mfccs = np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=13),axis=0)
     live_feature = live_mfccs
@@ -63,11 +63,11 @@ def emo_guess():
     live = live.stack().to_frame().T
 
     #pushes dataframe features through model to get output
-    json_file = open('model.json', 'r')
+    json_file = open('../model.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
-    loaded_model.load_weights("Emotion_Voice_Detection_Model.h5")
+    loaded_model.load_weights("../saved_models/Emotion_Voice_Detection_Model.h5")
     twodim= np.expand_dims(live, axis=2)
     livepreds = loaded_model.predict(twodim, 
                             batch_size=32, 
@@ -76,8 +76,8 @@ def emo_guess():
     liveabc = livepreds1.astype(int).flatten()
     print(liveabc)
     lb = LabelEncoder()
-    y_train=load('y_train.npy',allow_pickle=True)
-    y_test=load('y_test.npy',allow_pickle=True)
+    y_train=load('../y_train.npy',allow_pickle=True)
+    y_test=load('../y_test.npy',allow_pickle=True)
     y_train = np_utils.to_categorical(lb.fit_transform(y_train))
     y_test = np_utils.to_categorical(lb.fit_transform(y_test))
     livepredictions = str(lb.inverse_transform((liveabc))[0])
