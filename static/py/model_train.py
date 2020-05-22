@@ -152,7 +152,7 @@ def main():
     emotion=gender_emotion[1].capitalize()
     return gender,emotion
 
-gender,emotion= main()
-# waveform.show()
-print(gender)
-print(emotion)
+# gender,emotion= main()
+# # waveform.show()
+# print(gender)
+# print(emotion)

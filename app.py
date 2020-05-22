@@ -13,6 +13,11 @@ import librosa
 import glob
 import librosa.display
 import keras
+from flask import render_template
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
 from keras.preprocessing import sequence
 from keras.models import Sequential
 from keras.layers import Dense, Embedding
@@ -161,13 +166,12 @@ def predict():
     gender_emotion = livepredictions.split('_')
     gender=gender_emotion[0].capitalize()
     emotion=gender_emotion[1].capitalize()
-    # result={}
-    # result = {
-    #   'gender': gender,
-    #   'emotion': emotion
-    # }
-    # return jsonify(result)
-    return gender, emotion
+    
+    output = {
+      'gender': gender,
+      'emotion': emotion
+    }
+    return render_template('index.html',result=output)
 
 # Define what to do when a user a specific route
 @app.route("/")
@@ -193,4 +197,4 @@ def index2():
 
 # run app
 if __name__ == "__main__":
-    app.run(host="127.0.0.1",port=5000,threaded=False)
+    app.run(threaded=False)
