@@ -79,7 +79,7 @@ def main():
 
     intensity = snd.to_intensity()
     spectrogram = snd.to_spectrogram()
-    plt.figure()
+    plt.figure(figsize=(15, 5))
     draw_spectrogram(spectrogram)
     plt.twinx()
     draw_intensity(intensity)
@@ -104,7 +104,7 @@ def main():
     pre_emphasized_snd = snd.copy()
     pre_emphasized_snd.pre_emphasize()
     spectrogram = pre_emphasized_snd.to_spectrogram(window_length=0.03, maximum_frequency=8000)
-    plt.figure()
+    plt.figure(figsize=(15, 5))
     draw_spectrogram(spectrogram)
     plt.twinx()
     draw_pitch(pitch)
