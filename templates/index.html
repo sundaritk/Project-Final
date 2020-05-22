@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Can the Computer Recognize Your Emotion??</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../static/css/style.css">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Can the Computer Recognize Your Emotion??</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
           <!-- emply col to move over text -->
-          <div class="col-md-1"></div>
-          <div class="col-md-1"></div>
-          <div class="col-md-1"></div>
-          <a class="navbar-brand" href="index.html" style="color: orangered;  ">
-            <span class="nav-color">Can the Computer Recognize Your Emotion??</span>
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="about.html">About</a></li>
-            <li><a href="http://neuron.arts.ryerson.ca/ravdess/?f=3, http://kahlan.eps.surrey.ac.uk/savee/Download.html" target="_blank">Data</a></li>
-            <li><a href="license.html">License</a></li>
-          </ul>    
-        </div>        
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <a class="navbar-brand" href="index.html" style="color: orangered;  ">
+          <span class="nav-color">Can the Computer Recognize Your Emotion??</span>
+        </a>
       </div>
-    </nav>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="about.html">About</a></li>
+          <li><a href="http://neuron.arts.ryerson.ca/ravdess/?f=3, http://kahlan.eps.surrey.ac.uk/savee/Download.html" target="_blank">Data</a></li>
+          <li><a href="license.html">License</a></li>
+        </ul>    
+      </div>        
+    </div>
+  </nav>
+  <style>
+    .content, .outer-border { 
+    width: 1530px; 
+    height: 550px; 
+    text-align:justify; 
+    background-color:white; 
+    color:black; 
+    padding-left:15px; 
+    padding-right:15px; 
+    } 
+    .outer-border { 
+    /* border: 2px solid black;  */
+    position: relative; 
+    overflow: hidden; 
+    } 
+    .inner-border { 
+    position: absolute; 
+    left: 0; 
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+    } 
+    .inner-border::-webkit-scrollbar { 
+    display: none; 
+    } 
+  </style>
 </head>
 <body>
   <div class="outer-border"> 
@@ -59,47 +84,52 @@
             </div>
           </div>
           <br>
-          <div class="row">
-            <div class="col-md-12">
-              <p>The recorded voice is from a {{['gender']}} and the predicted emotion is {{['emotion']}} </p>
-            </div>
-          </div>
-          <br>
           <div class='row'>
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <h2 class="title">Emotion Recgnition and Prediction</h2><hr>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-12">
                 <div class="card mb-4 shadow-lg bg-light">
-                    <img class="p-3" src="tbd" alt="" width="100%">
+                    <img class="p-3" src="sound.png" alt="" width="100%">
                     <div class="card-body">
-                        <h4 class="card-header text-center">tbd</h4> 
+                        <h4 class="card-header text-center">Wave</h4> 
                     </div>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-12">
               <div class="card mb-4 shadow-lg bg-light">
-                <img class="p-3" src="tbd" alt="" width="100%">
+                <img class="p-3" src="Resources/images/spectrogram.png" alt="" width="100%" height="50%">
                 <div class="card-body">
-                  <h4 class="card-header text-center">tbd</h4> 
+                  <h4 class="card-header text-center">Spectro</h4> 
                 </div>
               </div>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-12">
               <div class="card mb-4 shadow-lg bg-light">
-                <img class="p-3" src="tbd" alt="" width="100%">
+                <img class="p-3" src="../Resources/images/spectrogram_0.03.png" alt="" width="100%">
                 <div class="card-body">
-                  <h4 class="card-header text-center">tbd</h4> 
+                  <h4 class="card-header text-center">Spectro</h4> 
                 </div>
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p>The recorded voice is from a {{['gender']}} and the predicted emotion is {{['emotion']}} </p>
+            </div>
+          </div>
+          <br>
+          <br><br><br><br>
+          <div class="row">
+            <div class="col-md-12">
+            <p>Emotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and PredictionEmotion Recgnition and Prediction</p>
+          </div>
+          </div>
         </div> 
     </div> 
   </div> 
-  <!-- <div class="ex1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</div> -->
-  <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 </body>
+<br><br><br><br>
 <footer>
   <div class="w3-container">
     <p> &copy; <i style="color: rgb(4, 0, 255)">Copyright UofM Data Bootcamp 2020</i></p>

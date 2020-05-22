@@ -124,23 +124,23 @@ def predict():
     featurelive = mfccs
     livedf2 = featurelive
     
-    plt.savefig("Resources/images/test1.png")
+    # plt.savefig("Resources/images/test1.png") # for testing
 
     livedf2= pd.DataFrame(data=livedf2)
     livedf2 = livedf2.stack().to_frame().T
     livedf2
     
-    plt.savefig("Resources/images/test2.png")
+    # plt.savefig("Resources/images/test2.png") # for testing
     
     json_file = open('Resources/data/analysis_output/model.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
-    plt.savefig("Resources/images/readdone.png")
+    # plt.savefig("Resources/images/readdone.png") # for testing
     # load weights into new model
     loaded_model.load_weights("Resources/data/saved_models/Emotion_Voice_Detection_Model.h5")
     
-    plt.savefig("Resources/images/test3.png")
+    # plt.savefig("Resources/images/test3.png") # for testing
     
     twodim= np.expand_dims(livedf2, axis=2)
 
@@ -148,20 +148,26 @@ def predict():
 
     livepreds1=livepreds.argmax(axis=1)
     
-    plt.savefig("Resources/images/test4.png")
+    # plt.savefig("Resources/images/test4.png")
     
     liveabc = livepreds1.astype(int).flatten()
     print(liveabc)
     lb = LabelEncoder()
-    y_train=load('y_train.npy',allow_pickle=True)
-    y_test=load('y_test.npy',allow_pickle=True)
+    y_train=load('static/py/y_train.npy',allow_pickle=True)
+    y_test=load('static/py/y_test.npy',allow_pickle=True)
     y_train = np_utils.to_categorical(lb.fit_transform(y_train))
     y_test = np_utils.to_categorical(lb.fit_transform(y_test))
     livepredictions = str(lb.inverse_transform((liveabc))[0])
     gender_emotion = livepredictions.split('_')
     gender=gender_emotion[0].capitalize()
     emotion=gender_emotion[1].capitalize()
-    return gender,emotion
+    # result={}
+    # result = {
+    #   'gender': gender,
+    #   'emotion': emotion
+    # }
+    # return jsonify(result)
+    return gender, emotion
 
 # Define what to do when a user a specific route
 @app.route("/")
@@ -187,4 +193,4 @@ def index2():
 
 # run app
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="127.0.0.1",port=5000,threaded=False)
