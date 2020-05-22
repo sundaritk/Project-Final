@@ -58,7 +58,7 @@ def main():
     plt.xlabel("time [s]")
     plt.ylabel("amplitude")
     #plt.show() or plt.savefig("Resources/images/sound.png")
-    plt.savefig("Resources/images/sound.png")
+    plt.savefig("static/images/sound.png")
 
 
 
@@ -84,7 +84,7 @@ def main():
     plt.twinx()
     draw_intensity(intensity)
     plt.xlim([snd.xmin, snd.xmax])
-    plt.savefig("Resources/images/spectrogram.png")
+    plt.savefig("static/images/spectrogram.png")
 
 
 
@@ -109,7 +109,7 @@ def main():
     plt.twinx()
     draw_pitch(pitch)
     plt.xlim([snd.xmin, snd.xmax])
-    plt.savefig("Resources/images/spectrogram_0.03.png")
+    plt.savefig("static/images/spectrogram_0.03.png")
 
 
     #livedf= pd.DataFrame(columns=['feature'])
