@@ -124,12 +124,12 @@ def main():
     livedf2
 
     
-    json_file = open('model.json', 'r')
+    json_file = open('static/py/model.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
     # load weights into new model
-    loaded_model.load_weights("saved_models/Emotion_Voice_Detection_Model.h5")
+    loaded_model.load_weights("static/py/saved_models/Emotion_Voice_Detection_Model.h5")
 
     twodim= np.expand_dims(livedf2, axis=2)
 
@@ -142,8 +142,8 @@ def main():
     liveabc = livepreds1.astype(int).flatten()
     print(liveabc)
     lb = LabelEncoder()
-    y_train=load('y_train.npy',allow_pickle=True)
-    y_test=load('y_test.npy',allow_pickle=True)
+    y_train=load('static/py/y_train.npy',allow_pickle=True)
+    y_test=load('static/py/y_test.npy',allow_pickle=True)
     y_train = np_utils.to_categorical(lb.fit_transform(y_train))
     y_test = np_utils.to_categorical(lb.fit_transform(y_test))
     livepredictions = str(lb.inverse_transform((liveabc))[0])
