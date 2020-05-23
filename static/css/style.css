@@ -1,8 +1,8 @@
 html{
     position: relative;
     min-height: 80%;
-    overflow: scroll;
-    overflow-y: hidden
+    /* overflow: scroll;
+    overflow-y: hidden */
 }
 
 .panel-body{
@@ -25,8 +25,8 @@ h2{
 }
 
 .content, .outer-border { 
-    width: 1500px; 
-    height: 525px; 
+    /* width: auto; 
+    height: auto;  */
     text-align:justify; 
     background-color:white; 
     color:black; 
@@ -40,20 +40,20 @@ h2{
     /* overflow: hidden;  */
     } 
 
-div.scroll { 
-    margin:4px, 4px; 
-    padding:4px; 
+/* div.scroll {  */
+    /* margin:4px, 4px;  */
+    /* padding:4px;  */
     /* background-color: green;  */
-    width: 1500px; 
-    height: 518px; 
+    /* width: 1500px;  */
+    /* height: 518px;  */
     /* overflow-x: hidden;  */
     /* overflow-y: hidden; */
-    overflow-y: auto;  
+    /* overflow-y: auto;   */
     /* overflow-x: auto;  */
-    text-align:justify; 
-    overflow: -moz-scrollbars-none;
-    -ms-overflow-style: none;
-} 
+    /* text-align:justify;  */
+    /* overflow: -moz-scrollbars-none; */
+    /* -ms-overflow-style: none; */
+/* }  */
 
 footer{
     /* background-color: DarkOliveGreen ; */

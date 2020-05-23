@@ -32,7 +32,7 @@ def model():
 # Define what to do when a user a specific route
 @app.route("/")
 def index1():
-    return render_template("index.html")
+    return render_template("index.html",emotion='emotion',gender='gender')
 
 @app.route("/data.html")
 def data():
